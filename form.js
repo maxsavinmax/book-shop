@@ -1,3 +1,5 @@
+"use strict";
+
 window.addEventListener(
     "load",
     function (e) {
@@ -38,19 +40,6 @@ window.addEventListener(
     false
 );
 
-// Let = count;
-// let gift = document.querySelectorAll(".gift");
-// gift.forEach((element) => {});
-
-// console.log(gift);
-
-function checkboxFunction() {
-    let pack = document.querySelector('.gift[value="pack"]');
-    let postcard = document.querySelector('.gift[value="postcard"]');
-    let discount = document.querySelector('.gift[value="discount"]');
-    let pensil = document.querySelector('.gift[value="pensil"]');
-}
-
 const completeButton = document.querySelector(".button");
 document.querySelectorAll('input[type="text"]').forEach((elem) => {
     elem.onblur = function () {
@@ -64,21 +53,7 @@ document.querySelectorAll('input[type="text"]').forEach((elem) => {
     };
 });
 
-// function generateCartProduct(title, price, id) {
-//     return `
-//     <li class="cart-content__item">
-//         <article class="cart-content__product cart-product" data-id='${id}'>
-//             <div class="cart-product-text">
-//                 <h3 class="cart-product__title">${title}</h3>
-//                 <span class="cart-product__price">${price} ${CURRENCY_US} </span>
-//             </div>
-//             <button class="cart-product__delete"></button>
-//         </article>
-//     </li>
-//     `;
-// }
-
-function myFunction() {
+function CreateSummarizedInformation() {
     let name = document.getElementById("name").value;
     let surname = document.getElementById("surname").value;
     let street = document.getElementById("street").value;
@@ -108,5 +83,3 @@ function myFunction() {
         );
     }
 }
-
-// alert(name + " " + surname + " " + "Your email is " + street); //this will alert the first name and the last name.

@@ -35,9 +35,6 @@ input {
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-    /* text-align: center; */
-    /* border: 2px solid #eee; */
-    /* border: 0; */
 }
 
 textarea {

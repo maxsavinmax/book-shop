@@ -11,15 +11,12 @@ function renderPage() {
         .then((data) => {
             createHeader(data);
             createMain(data);
-            // createHeader(data);
             return data;
         })
         .then((data) => {
-            createCart(data);
+            addToCart(data);
             popUp(data);
             visibleCart();
-
-            // addListener();
         });
 }
 
@@ -37,48 +34,50 @@ function createHeader(data) {
     title.appendChild(titleText);
     header.appendChild(title);
 
-    // cart
-    const cartContainer = document.createElement("div");
-    const cart = document.createElement("div");
-    const cartContent = document.createElement("div");
-    const cartQuantity = document.createElement("span");
-    const contentList = document.createElement("ul");
-    const cardBottom = document.createElement("div");
-    const contentfullPrice = document.createElement("div");
-    const fullPrice = document.createElement("span");
-    const cartContentBtn = document.createElement("button");
-    const basketImg = document.createElement("img");
+    function createCart() {
+        const cartContainer = document.createElement("div");
+        const cart = document.createElement("div");
+        const cartContent = document.createElement("div");
+        const cartQuantity = document.createElement("span");
+        const contentList = document.createElement("ul");
+        const cardBottom = document.createElement("div");
+        const contentfullPrice = document.createElement("div");
+        const fullPrice = document.createElement("span");
+        const cartContentBtn = document.createElement("button");
+        const basketImg = document.createElement("img");
 
-    const a = document.createElement("a");
+        const a = document.createElement("a");
 
-    cartContainer.classList.add("cart-container", "cart-zone");
-    cart.classList.add("header__cart", "cart");
-    cartContent.classList.add("cart-content");
-    basketImg.classList.add("basket");
-    cartQuantity.classList.add("cart__quantity");
-    contentList.classList.add("cart-content__list");
-    cardBottom.classList.add("cart-content__bottom");
-    contentfullPrice.classList.add("cart-content_fullprice");
-    fullPrice.classList.add("fullprice");
-    cartContentBtn.classList.add("cart-content__btn", "button");
+        cartContainer.classList.add("cart-container", "cart-zone");
+        cart.classList.add("header__cart", "cart");
+        cartContent.classList.add("cart-content");
+        basketImg.classList.add("basket");
+        cartQuantity.classList.add("cart__quantity");
+        contentList.classList.add("cart-content__list");
+        cardBottom.classList.add("cart-content__bottom");
+        contentfullPrice.classList.add("cart-content_fullprice");
+        fullPrice.classList.add("fullprice");
+        cartContentBtn.classList.add("cart-content__btn", "button");
 
-    cartContainer.setAttribute("ondrop", "return drop(event)");
+        cartContainer.setAttribute("ondrop", "return drop(event)");
 
-    header.appendChild(cartContainer);
-    cartContainer.appendChild(basketImg);
-    cartContainer.appendChild(cart);
-    cart.appendChild(cartQuantity);
-    cart.appendChild(cartContent);
-    cartContent.appendChild(contentList);
-    cartContent.appendChild(cardBottom);
-    cardBottom.appendChild(contentfullPrice);
-    cardBottom.appendChild(cartContentBtn);
-    contentfullPrice.appendChild(fullPrice);
+        header.appendChild(cartContainer);
+        cartContainer.appendChild(basketImg);
+        cartContainer.appendChild(cart);
+        cart.appendChild(cartQuantity);
+        cart.appendChild(cartContent);
+        cartContent.appendChild(contentList);
+        cartContent.appendChild(cardBottom);
+        cardBottom.appendChild(contentfullPrice);
+        cardBottom.appendChild(cartContentBtn);
+        contentfullPrice.appendChild(fullPrice);
 
-    basketImg.src = "/assets/basket_96252.svg";
+        basketImg.src = "/assets/basket_96252.svg";
 
-    cartQuantity.innerText = "0";
-    cartContentBtn.innerText = "Confirm order";
+        cartQuantity.innerText = "0";
+        cartContentBtn.innerText = "Confirm order";
+    }
+    createCart();
 
     return fragment;
 }
@@ -134,7 +133,7 @@ function createCard(item) {
     return card;
 }
 
-function createCart(data) {
+function addToCart(data) {
     const productsBtn = document.querySelectorAll(".button-add");
     const cartProductsList = document.querySelector(".cart-content__list");
     const cart = document.querySelector(".cart");
@@ -227,7 +226,6 @@ function createCart(data) {
         });
     });
 
-    // dragnDrop
     function dragAndDrop() {
         cartZone.ondragover = allowDrop;
 

@@ -72,7 +72,7 @@ function createHeader(data) {
         cardBottom.appendChild(cartContentBtn);
         contentfullPrice.appendChild(fullPrice);
 
-        basketImg.src = "/assets/basket_96252.svg";
+        basketImg.src = "assets/basket_96252.svg";
 
         cartQuantity.innerText = "0";
         cartContentBtn.innerText = "Confirm order";
@@ -247,7 +247,7 @@ function addToCart(data) {
         });
 
         document.querySelector(".cart-content__btn").onclick = function () {
-            window.location.href = "/form.html";
+            window.location.href = "form.html";
         };
 
         cartZone.ondrop = drop;

@@ -1,0 +1,208 @@
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.06em;
+    color: white;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    z-index: 5;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 40px 50px;
+    background-color: black;
+}
+
+.main {
+    padding-top: 180px;
+    padding-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.book-img {
+    width: 55%;
+    height: 200px;
+}
+
+.basket {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    width: 20%;
+    height: 440px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+}
+
+.title {
+    max-width: 75%;
+}
+
+.button {
+    padding: 5px 35px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 130%;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.button:hover {
+    background-color: #ffffff;
+}
+
+.button-add {
+    padding: 5px 50px;
+}
+
+.button-add:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.price {
+    font-size: 1.7rem;
+}
+
+.cart {
+    position: relative;
+    text-align: center;
+}
+
+.cart__quantity {
+    font-size: 1.7rem;
+    color: #ffffff;
+}
+
+.cart-content {
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+    right: 50px;
+    top: -90px;
+    width: 700px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+/* .cart-content__item {
+    padding-bottom: 10px;
+} */
+.cart-content__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    max-height: 90px;
+    overflow: auto;
+}
+
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-delite {
+    width: 25px;
+    height: 25px;
+}
+
+.cart-product-text {
+    display: flex;
+    gap: 50px;
+}
+
+.cart-product__delete {
+    display: flex;
+    background: url("./assets/dustbin_120823.svg") no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.cart-content__bottom {
+    display: flex;
+    padding-top: 5px;
+    justify-content: space-around;
+}
+
+.cart-content_fullprice {
+    font-size: 20px;
+}
+
+.logo {
+    position: relative;
+}
+
+.summarized-information {
+    position: absolute;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+}
+
+.button-show {
+    position: relative;
+    z-index: 1;
+}
+.information-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: 255px;
+    top: 0;
+    font-size: 0.8rem;
+    z-index: 2;
+    font-weight: 900;
+    background-color: rgb(246, 246, 246);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.visible {
+    display: block;
+}

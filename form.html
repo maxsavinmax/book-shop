@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="form.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Book Shop</h1>
+                </a>
+                <div class="information"></div>
+            </div>
+            <form
+                class="form"
+                onsubmit="CreateSummarizedInformation(event); return false; "
+                action="./form.html#information"
+            >
+                <input
+                    type="text"
+                    name="text"
+                    placeholder="Name"
+                    pattern="[A-Za-z]{4,}"
+                    required
+                    id="name"
+                />
+                <input
+                    type="text"
+                    name="text"
+                    placeholder="Surname"
+                    pattern="[A-Za-z]{5,}"
+                    required
+                    id="surname"
+                />
+                <input
+                    type="text"
+                    name="text"
+                    placeholder="Street"
+                    minlength="5"
+                    required
+                    id="street"
+                />
+                <input
+                    type="text"
+                    name="text"
+                    placeholder="House"
+                    pattern="[0-9]{1,5}"
+                    required
+                    id="house"
+                />
+                <input
+                    type="text"
+                    name="text"
+                    placeholder="Flat"
+                    pattern="[1-9]([0-9]+)?(-[0-9]+)?"
+                    required
+                    id="flat"
+                />
+
+                <input
+                    id="mydate"
+                    type="date"
+                    name="mydate"
+                    placeholder="Delivery Date"
+                    min=""
+                    required
+                />
+                <div class="buttons">
+                    <div class="radio_container">
+                        <h2>Payment method:</h2>
+
+                        <label class="radio"
+                            >Cash
+                            <input type="radio" name="Payment" checked />
+                            <span></span>
+                        </label>
+                        <label class="radio"
+                            >Card
+                            <input type="radio" name="Payment" />
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="checkbox__container">
+                        <h2>Choose 2 gifts:</h2>
+                        <label class="checkbox"
+                            >Pack as a gift
+                            <input type="checkbox" class="gift" value="pack" />
+                            <span></span>
+                        </label>
+                        <label class="checkbox"
+                            >Add postcard
+                            <input
+                                type="checkbox"
+                                class="gift"
+                                value="postcard"
+                                id="one"
+                            />
+                            <span></span>
+                        </label>
+                        <label class="checkbox"
+                            >Provide 2% discount to the next time
+                            <input
+                                type="checkbox"
+                                class="gift"
+                                value="discount"
+                            />
+                            <span></span>
+                        </label>
+                        <label class="checkbox"
+                            >Branded pen or pencil
+                            <input
+                                type="checkbox"
+                                class="gift"
+                                value="pensil"
+                            />
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <textarea placeholder="Comment..."></textarea>
+                <button class="button">Complete</button>
+            </form>
+        </div>
+
+        <script src="./form.js" defer></script>
+    </body>
+</html>

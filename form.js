@@ -20,26 +20,6 @@ window.addEventListener(
     false
 );
 
-window.addEventListener(
-    "load",
-    function (e) {
-        let date = new Date();
-        let day = date.getDate();
-        if (day < 10) {
-            day = "0" + day;
-        }
-        let month = date.getMonth() + 1;
-        if (month < 10) {
-            month = "0" + month;
-        }
-        let year = date.getFullYear();
-        document.getElementById("mydate").value =
-            year + "-" + month + "-" + day;
-        console.log(day);
-    },
-    false
-);
-
 const completeButton = document.querySelector(".button");
 document.querySelectorAll('input[type="text"]').forEach((elem) => {
     elem.onblur = function () {
